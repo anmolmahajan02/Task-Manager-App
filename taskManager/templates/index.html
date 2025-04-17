@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <style>
+            .logoutButton {
+                background-color: #6e75a8;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1rem;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            .logoutButton:hover {
+                background-color: #3c3744;
+            }
+
+            .alogout {
+                padding: 0%;
+                margin: 0;
+                outline: 0cap;
+                border: 0cap;
+                border-radius: 0;
+                background-color: #141204;
+            }
+            .logout {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logout">
+            <a class="alogout" href="{% url 'logout' %}">
+                <button class="logoutButton">Logout</button>
+            </a>
+        </div>
+        <h1 style="margin-bottom: 0px">Welcome {{user.username}}</h1>
+        <h1>DashBoard</h1>
+        <div class="nav_links">
+            <a href="{% url 'addTasks' %}">Add Tasks</a>
+            <a href="{% url 'yourTasks' %}">Your Tasks</a>
+        </div>
+    </body>
+</html>

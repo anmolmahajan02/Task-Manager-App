@@ -1,0 +1,93 @@
+body {
+    min-width: 800px;
+    background-color: beige;
+    text-align: center;
+}
+h1 {
+    font-size: 3rem;
+    color: #3c3744;
+    padding: 1em;
+    padding-bottom: 0.5em;
+    margin: 0px 0px 50px 0px;
+}
+
+.form {
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+}
+
+.newUser {
+    font-size: 1rem;
+    padding-top: 0.7em;
+    padding-bottom: 1em;
+}
+
+button {
+    background-color: #6e75a878;
+    border-radius: 8px;
+    width: 12.5%;
+    font-size: 1rem;
+    padding: 0em;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    border-radius: 10px;
+    width: 35%;
+}
+
+.loginDetails,
+.task {
+    background-color: cornsilk;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #6e75a8;
+    color: white;
+}
+h3 {
+    color: red;
+    padding: 0%;
+}
+
+.Tback {
+    all: unset;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.Iback {
+    all: unset;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.Tbutton,
+.Ibutton {
+    padding: 10px 20px;
+    width: 200px;
+    background-color: #6e75a8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.divTBack {
+    float: left;
+}
+.divIBack {
+    float: right;
+}

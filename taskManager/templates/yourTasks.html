@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Your Tasks</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <style>
+            .delete {
+                background-color: transparent;
+                color: red;
+                border: none;
+                font-size: 1rem;
+                cursor: pointer;
+                margin-left: 10px;
+                transition: transform 0.2s ease;
+            }
+
+            .delete:hover {
+                transform: scale(1.2);
+                color: darkred;
+            }
+
+            .taskLink {
+                all: unset;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dash">
+            <a class="back" href="{% url 'index' %}"><button class="backButton">Go To Dashboard</button></a>
+        </div>
+        <div class="adash">
+            <a class="back" href="{% url 'allTasks' %}"><button class="backButton">Go To All Tasks</button></a>
+        </div>
+        <h1>Your Tasks</h1>
+
+        <div class="taskContainer">
+            {% for t in tasks %}
+            <li class="taskItem">
+                <a class="taskLink" href="{% url 'fullTask' t.id %}">
+                    <strong class="taskTitle">{{ t.title }}</strong>
+                </a>
+                <a style="all: unset" class="dela" href="{% url 'delete' t.id %}">
+                    <button class="delete">❌</button>
+                </a>
+                <br />
+                <p>{{ t.discription|truncatewords:20 }}</p>
+                <p><strong>Due Date:</strong> {{ t.lastDate }}</p>
+            </li>
+            {% empty %}
+            <p style="color: azure">No tasks found.</p>
+            <a class="noTaska" href="{% url 'addTasks'%}"><button class="noTask">Add Task</button></a>
+            {% endfor %} {% if taskCount|length > 3 %}
+            <a class="noTaska" href="{% url 'allTasks' %}"><button class="noTask">see all</button></a>
+            {% endif %}
+        </div>
+    </body>
+</html>

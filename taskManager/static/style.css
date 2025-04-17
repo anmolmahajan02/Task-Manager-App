@@ -1,0 +1,101 @@
+body {
+    min-width: 800px;
+    background-color: #141204;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #909590;
+    padding: 1em;
+    padding-top: 1em;
+    margin: 0px 0px 50px 10px;
+}
+
+a {
+    color: #3c3744;
+    background-color: #8d91c7;
+    font-size: 3rem;
+    padding: 0.3em;
+    margin: 20px;
+    outline: #6e75a8 double;
+    border: 2px solid #8d91c7;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9fb6dc;
+}
+
+.nav_links {
+    text-align: center;
+}
+
+.taskItem {
+    box-shadow: 5px 5px 15px rgba(110, 110, 110, 0.3);
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: #8d91c7;
+    border: 2px solid #8d91c7 auto;
+    border-radius: 20px;
+    outline: #6e75a8 double;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.taskTitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.taskcontainer {
+    all: unset;
+    width: 200px;
+}
+ol {
+    list-style-position: inside;
+}
+
+.back {
+    text-align: right;
+    all: unset;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dash {
+    float: right;
+}
+
+.adash {
+    float: left;
+}
+
+.backButton {
+    background-color: #6e75a8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delA {
+    all: unset;
+}
+
+.delete {
+    all: unset;
+}
+
+.noTask {
+    padding: 5px;
+    cursor: pointer;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.noTaska {
+    all: initial;
+}

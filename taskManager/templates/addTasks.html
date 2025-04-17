@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Tasks</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'login.css' %}" />
+    </head>
+    <body>
+        <div class="divTBack">
+            <a class="Tback" href="{% url 'yourTasks' %}"><button class="Tbutton">Go To Your Tasks</button></a>
+        </div>
+
+        <div class="divIBack">
+            <a class="Iback" href="{% url 'index' %}"><button class="Ibutton">Go To Dashboard</button></a>
+        </div>
+        <h1>Add Task</h1>
+
+        <div class="task">
+            <div class="form">
+                <form method="POST">
+                    {% csrf_token %}
+                    <p>Title</p>
+                    <textarea placeholder="Title...." name="title" required></textarea>
+                    <p>Discription</p>
+                    <textarea placeholder="Discription...." name="discription" required></textarea>
+                    <p>Last Date</p>
+                    <input type="date" name="date" required /><br /><br />
+                    <button type="submit">Add task</button><br /><br />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
